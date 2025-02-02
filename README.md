@@ -6,8 +6,6 @@ I2C module for RCBus systems.
 
 Version 1.1 (5V only)
 
-
-
 ![populated board](I2C12.jpg)
 
 Version 1.2 (5V & 3.3V)
@@ -108,6 +106,8 @@ Gerber files prepared for production at JLCPCB
 ## Release Notes
 
 (*) Not available in version 1.1, for version 1.2 it is optional.
+
+
 (**) Quartz oscillator is required for systems with a system clock greater than 12MHz.
 
 ## Changes
