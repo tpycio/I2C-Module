@@ -50,7 +50,7 @@ Version 1.2 (5V & 3.3V)
 | --- | --- | --- | --- | --- | --- |
 | GND | +5V | SDA | SCL | +5V | GND |
 
-The connector is compatible with [SC400]([I2C Bus Modules (SC400 series) | Small Computer Central](https://smallcomputercentral.com/i2c-bus-modules/)) series I2C bus modules.
+The connector is compatible with [SC400](https://smallcomputercentral.com/i2c-bus-modules/) series I2C bus modules.
 
 ###### J2 - Internal I2C interface
 
