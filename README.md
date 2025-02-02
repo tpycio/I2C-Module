@@ -16,7 +16,7 @@ Version 1.2 (5V & 3.3V)
 
 ###### Schematic
 
-[Schematic](schematic.pdf)
+[Schematic](Schematic.pdf)
 
 ## Jumpers and Connectors
 
