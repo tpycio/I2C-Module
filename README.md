@@ -1,27 +1,74 @@
-# PCF8584 I2C module for RCBus
+## PCF8584 I2C module for RCBus
 
 I2C module for RCBus systems.
 
-![populated board](board.jpg)
+![populated board](I2C11.jpg)
+
+Version 1.1 (5V only)
+
+-
+
+![populated board](I2C12.jpg)
+
+Version 1.2 (5V & 3.3V)
 
 ## Hardware Documentation
 
-### Schematic
+###### Schematic
 
-[Schematic - Version 1.2](schematic.pdf)
+[Schematic](schematic.pdf)
 
-### Jumpers and Connectors
+## Jumpers and Connectors
 
-JP1 - Clock source
+###### JP1 - Clock source
 
 | Position      | Description     |
 | ------------- | --------------- |
 | 1-2 (default) | from bus        |
 | 2-3           | from oscillator |
 
+###### JP2 -  I/O address select
 
+| Position | Description       |
+| -------- | ----------------- |
+| 1-2      | I/O address: 0x40 |
+| 3-4      | I/O address: 0x48 |
+| 5-6      | I/O address: 0x50 |
+| 7-8      | I/O address: 0x58 |
 
-### Bill of Materials
+###### JP3 - Interrupt select
+
+| Position | Description       |
+| -------- | ----------------- |
+| 1-2      | /INT              |
+| 2-3      | /IRQB             |
+| open     | interrupt not use |
+
+###### J1 - I2C external connector
+
+| 1   | 2   | 3   | 4   | 5   | 6   |
+| --- | --- | --- | --- | --- | --- |
+| GND | +5V | SDA | SCL | +5V | GND |
+
+The connector is compatible with [SC400]([I2C Bus Modules (SC400 series) | Small Computer Central](https://smallcomputercentral.com/i2c-bus-modules/)) series I2C bus modules.
+
+###### J2 - Internal I2C interface
+
+| 1   | 2   | 3   | 4   |
+| --- | --- | --- | --- |
+| GND | +5V | SCL | SDA |
+
+The connector allows the connection of a 0.96" OLED display.
+
+NOTE: Two different models of these displays are available, differing in the way they are powered. Connecting the wrong model will damage it!
+
+###### J3* - External 3V3 I2C connector
+
+| 1     | 2   | 3   | 4   |
+| ----- | --- | --- | --- |
+| +3.3V | GND | SDA | SCL |
+
+## Bill of Materials
 
 | Component type     | Reference | Description                                                   | Quantity |
 | ------------------ | --------- | ------------------------------------------------------------- | -------- |
@@ -37,7 +84,7 @@ JP1 - Clock source
 | Resistor           | R3*,R4*   | 4.7 kohm, SMD 0805                                            | 2        |
 | Capacitor          | C1 - C4   | 0.1 uF, 50V, MLCC, 2.5 mm pitch                               | 4        |
 | Capacitor          | C5*,C6*   | 10uF, ceramic, SMD 0805                                       | 2        |
-| Crystal            | Y1        | 32768 Hz                                                      |          |
+| Crystal            | Y1        | 32768 Hz crystal                                              | 1        |
 | Oscillator         | X1**      | 12 MHz, CMOS oscillator, half can                             | 1        |
 | Connector          | S1        | 2x40 pin header, 2.54 mm pitch, angle                         | 1        |
 | Pin Header         | J1        | 6 pin header, 2.54 mm pitch, angle                            | 1        |
@@ -54,11 +101,18 @@ JP1 - Clock source
 
 Gerber files prepared for production at JLCPCB
 
+* [Version 1.1](RTCMem11.zip)
+
+* [Version 1.2](RTCMem12.zip)
+
 ## Release Notes
 
-### Changes
+(*) Not available in version 1.1, for version 1.2 it is optional.
+(**) Quartz oscillator is required for systems with a system clock greater than 12MHz.
 
-* Version 1.2
+## Changes
+
+* Version 1.1 (5V only) & 1.2 (5V/3v3)
   
   * Initial public version
 
