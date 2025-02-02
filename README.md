@@ -6,7 +6,7 @@ I2C module for RCBus systems.
 
 Version 1.1 (5V only)
 
--
+
 
 ![populated board](I2C12.jpg)
 
@@ -14,20 +14,20 @@ Version 1.2 (5V & 3.3V)
 
 ## Hardware Documentation
 
-###### Schematic
+#### Schematic
 
 [Schematic](Schematic.pdf)
 
 ## Jumpers and Connectors
 
-###### JP1 - Clock source
+#### JP1 - Clock source
 
 | Position      | Description     |
 | ------------- | --------------- |
 | 1-2 (default) | from bus        |
 | 2-3           | from oscillator |
 
-###### JP2 -  I/O address select
+#### JP2 -  I/O address select
 
 | Position | Description       |
 | -------- | ----------------- |
@@ -36,7 +36,7 @@ Version 1.2 (5V & 3.3V)
 | 5-6      | I/O address: 0x50 |
 | 7-8      | I/O address: 0x58 |
 
-###### JP3 - Interrupt select
+#### JP3 - Interrupt select
 
 | Position | Description       |
 | -------- | ----------------- |
@@ -44,7 +44,7 @@ Version 1.2 (5V & 3.3V)
 | 2-3      | /IRQB             |
 | open     | interrupt not use |
 
-###### J1 - I2C external connector
+#### J1 - I2C external connector
 
 | 1   | 2   | 3   | 4   | 5   | 6   |
 | --- | --- | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ Version 1.2 (5V & 3.3V)
 
 The connector is compatible with [SC400](https://smallcomputercentral.com/i2c-bus-modules/) series I2C bus modules.
 
-###### J2 - Internal I2C interface
+#### J2 - Internal I2C interface
 
 | 1   | 2   | 3   | 4   |
 | --- | --- | --- | --- |
@@ -62,7 +62,7 @@ The connector allows the connection of a 0.96" OLED display.
 
 NOTE: Two different models of these displays are available, differing in the way they are powered. Connecting the wrong model will damage it!
 
-###### J3* - External 3V3 I2C connector
+#### J3* - External 3V3 I2C connector
 
 | 1     | 2   | 3   | 4   |
 | ----- | --- | --- | --- |
